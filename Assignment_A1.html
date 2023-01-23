@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <script>
+    let x=prompt('enter balance')
+    let rate=7
+    let years=5
+    function bankdetails(name,address) {
+        return `${name} and ${address}`
+    }
+    function simpleintrest(n,r,cb){
+        return x*n*r
+        cb()
+    }
+   </script>
+</head>
+<body>
+    <h1>Assignment A1</h1>
+    <div>
+        <h4 id="head1"></h4>
+        <h4 id="head2"></h4>
+    </div>
+    <script>
+        document.getElementById('head1').innerHTML=bankdetails('saiprasad','goa')
+        const str="The simple intrest calculated for Rs."+x+" is for years "+years+" at rate if intrest "+rate+"% is <br>"
+        document.getElementById('head2').innerHTML=str+simpleintrest(years,rate,bankdetails('saiprasad','goa'))
+    </script>
+</body>
+</html>
