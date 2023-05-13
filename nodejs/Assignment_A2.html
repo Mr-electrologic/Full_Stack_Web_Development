@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Assignment A2</title>
+    <script>
+        x=prompt('enter the department')
+emps=[
+    {ssn:'123',name:'jim',sal:5000,dept:"sales"},
+    {ssn:'234',name:'kim',sal:4000,dept:"adv"},
+    {ssn:'345',name:'rim',sal:4500,dept:"production"},
+    {ssn:'456',name:'sim',sal:4500,dept:"sales"},
+    {ssn:'567',name:'jim',sal:7000,dept:"adv"}
+]
+    mapp=emps.filter(ele=>ele.dept==x).map(ele=>`${ele.sal}`)
+    sal=emps.filter(ele=>ele.dept==x).reduce((p,c)=>p+c.sal,0)
+    avg=sal/mapp.length
+    </script>
+</head>
+<body>
+    <h1>Assignment A2</h1>
+    <div>
+        <h2 id="disp"></h2>
+    </div>
+    <script> 
+    if (isNaN(avg)) {
+        document.getElementById('disp').innerHTML="The department not found"
+    }
+    else {
+        document.getElementById('disp').innerHTML="The average salary for deparment "+x+" is :"+avg
+    }
+    </script>
+</body>
+</html>
